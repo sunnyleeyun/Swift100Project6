@@ -39,10 +39,13 @@
                     <navigationItem key="navigationItem" title="First View" id="ZXr-cv-o1I">
                         <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="cgu-z1-WiB">
                             <connections>
-                                <segue destination="JM2-95-hui" kind="show" id="4HA-hd-rAU"/>
+                                <segue destination="JM2-95-hui" kind="show" identifier="Done" id="4HA-hd-rAU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="edit_TextView" destination="i0F-79-TXo" id="Oet-3b-6k0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,12 +72,12 @@
         <!--Second View-->
         <scene sceneID="kK7-zu-EKj">
             <objects>
-                <viewController id="JM2-95-hui" sceneMemberID="viewController">
+                <viewController id="JM2-95-hui" customClass="SecondViewController" customModule="project6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lOt-xM-v7W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MWB-Kx-FKb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWB-Kx-FKb">
                                 <rect key="frame" x="30" y="94" width="315" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -94,6 +97,9 @@
                         <viewLayoutGuide key="safeArea" id="KGf-8j-uMH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Second View" id="ngZ-BR-JQm"/>
+                    <connections>
+                        <outlet property="Show_TextView" destination="MWB-Kx-FKb" id="o0Z-rB-IHQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ud-4W-SZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
